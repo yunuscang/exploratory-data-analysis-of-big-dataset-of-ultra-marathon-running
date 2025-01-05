@@ -1,0 +1,31 @@
+About Dataset
+According to the Wikipedia, an ultramarathon, also called ultra distance or ultra running, is any footrace longer than the traditional marathon length of 42.195 kilometres (26 mi 385 yd). Various distances are raced competitively, from the shortest common ultramarathon of 31 miles (50 km) to over 200 miles (320 km). 50k and 100k are both World Athletics record distances, but some 100 miles (160 km) races are among the oldest and most prestigious events, especially in North America.}
+
+The data in this file is a large collection of ultra-marathon race records registered between 1798 and 2022 (a period of well over two centuries) being therefore a formidable long term sample. All data was obtained from public websites.
+
+Despite the original data being of public domain, the race records, which originally contained the athlete´s names, have been anonymized to comply with data protection laws and to preserve the athlete´s privacy. However, a column Athlete ID has been created with a numerical ID representing each unique runner (so if Antonio Fernández participated in 5 races over different years, then the corresponding race records now hold his unique Athlete ID instead of his name). This way I have preserved valuable information.
+
+The dataset contains 7,461,226 ultra-marathon race records from 1,641,168 unique athletes.
+
+The following columns (with data types) are included:
+
+Year of event (int64)
+Event dates (object)
+Event name (object)
+Event distance/length (object)
+Event number of finishers (int64)
+Athlete performance (object)
+Athlete club (object)
+Athlete country (object)
+Athlete year of birth (float64)
+Athlete gender (object)
+Athlete age category (object)
+Athlete average speed (object)
+Athlete ID (int64)
+The Event name column include country location information that can be derived to a new column, and similarly seasonal information can be found in the Event dates column beyond the Year of event (these can be extracted with a bit of processing).
+
+The Event distance/length column describes the type of race, covering the most popular UM race distances and lengths, and some other specific modalities (multi-day, etc.):
+
+Distances: 50km, 100km, 50mi, 100mi
+Lengths: 6h, 12h, 24h, 48h, 72h, 6d, 10d
+Additionally, there is information of age, gender and speed (in km/h) in other columns.
